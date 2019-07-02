@@ -1,0 +1,38 @@
+
+
+
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/v1/recommendations">Your recommendations</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Reminders</li>
+            </ol>
+        </div>
+
+        <h1 class="govuk-heading-xl">Medicine reminders</h1>
+        <p class="govuk-body-l">Set a reminder here and we'll send you a regular text message, email or phone call.</p>
+
+        <h2 class="govuk-heading-m">Your reminders</h2>
+        <p>You have no reminders yet.</p>
+        <a class="govuk-button" href="/v1/medicine-reminders/new">Set first reminder</a>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

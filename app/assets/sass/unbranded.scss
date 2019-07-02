@@ -35,3 +35,14 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
         margin-bottom: 0px;
     }
 }
+
+.panel--blue{
+    p, a{
+        color: white !important;
+    }
+    background: #006990;
+}
+
+.service{
+    margin: 20px 0px;
+}

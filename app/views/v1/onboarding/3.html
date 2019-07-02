@@ -1,0 +1,64 @@
+hey
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <a href="/v1/onboarding/1" class="govuk-back-link">Back</a>
+        <span class="govuk-caption-xl">Step 3 of 3</span>
+
+        <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="support-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      What do you most need help with, right now?
+                    </h1>
+                  </legend>
+                  <span id="support-hint" class="govuk-hint">
+                    Choose as many as you like
+                  </span>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="support-1" name="support" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="support-1">
+                        Coping with daily tasks
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="support-2" name="support" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="support-2">
+                        Talking through my worries
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="support-3" name="support" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="support-3">
+                          Understanding what's likely to happen in the future
+                        </label> </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="support-4" name="support" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="support-4">
+                          Staying active
+                        </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="support-5" name="support" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="support-5">
+                        Something else
+                      </label> </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+        <a href="/v1/recommendations" role="button" draggable="false" class="govuk-button">
+            Go to your recommendations
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}

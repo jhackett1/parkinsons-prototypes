@@ -1,0 +1,57 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/v1/recommendations" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-xl">Make an account to continue</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+            Email address or phone number
+        </label>
+        <input class="govuk-input govuk-input--width-20"" id="event-name" name="event-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                Choose a password
+            </label>
+            <input class="govuk-input govuk-input--width-20"" id="event-name" name="event-name" type="text" >
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                Confirm your password
+            </label>
+            <input class="govuk-input govuk-input--width-20"" id="event-name" name="event-name" type="text">
+        </div>
+
+        <a href="#" role="button" draggable="false" class="govuk-button">
+            Register
+        </a>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="panel">
+            <h2 class="govuk-heading-m">Log into your existing account </h2>
+            <br/>
+            <a href="#" role="button" draggable="false" class="govuk-button">
+                Log in
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

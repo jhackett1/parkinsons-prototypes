@@ -1,0 +1,88 @@
+
+
+
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/v1/recommendations">Your recommendations</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/v1/medicine-reminders">Reminders</a>
+                    </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">New reminder</li>
+            </ol>
+        </div>
+
+        <h1 class="govuk-heading-xl">Set a new reminder</h1>
+
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+                What's this reminder for?
+            </label>
+            <span id="more-detail-hint" class="govuk-hint">
+                You might want to include the name of the medication and the dose.
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                When, and how often, shall we remind you?
+            </label>
+            <span id="event-name-hint" class="govuk-hint">
+                For example, "every day at 10AM"
+            </span>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="reminder-type-hint">
+                <p> 
+                    How shall we remind you?
+                </p>
+                <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reminder-type-1" name="reminder-type" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="reminder-type-1">
+                    Text message
+                    </label> </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reminder-type-2" name="reminder-type" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="reminder-type-2">
+                    Phone call
+                    </label> </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="reminder-type-3" name="reminder-type" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="reminder-type-3">
+                            Email
+                        </label> </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <a class="govuk-button" href="/v1/medicine-reminders">Save and set reminder</a>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
