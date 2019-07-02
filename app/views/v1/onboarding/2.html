@@ -1,0 +1,32 @@
+hey
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <a href="/v1/onboarding/1" class="govuk-back-link">Back</a>
+        <span class="govuk-caption-xl">Step 2 of 3</span>
+        <h1 class="govuk-heading-xl">Where do you live?</h1>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                Give a town, city or postcode
+            </label>
+            <span id="event-name-hint" class="govuk-hint">Knowing this lets us suggest support in your area.</span>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <a href="/v1/onboarding/3" role="button" draggable="false" class="govuk-button">
+            Next step
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}

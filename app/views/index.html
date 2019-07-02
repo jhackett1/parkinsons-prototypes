@@ -1,0 +1,29 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Parkinsons UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Parkinsons Direct prototypes
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>
+
+      <p>Clickable prototypes for user research at Parkinsons UK.</p>
+
+      <h2 class="govuk-heading-m">Version 1</h2>
+      <p>First version</p>
+      <a href="/v1" role="button" draggable="false" class="govuk-button govuk-button--start">
+        Start now
+      </a>
+
+    </div>
+</div>
+
+{% endblock %}
