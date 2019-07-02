@@ -31,7 +31,7 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     background: #f2f2f2;
     padding: 25px;
     margin-bottom: 30px;
-    *:last-of-type{
+    *:last-child{
         margin-bottom: 0px;
     }
 }

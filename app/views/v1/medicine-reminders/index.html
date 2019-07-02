@@ -10,6 +10,8 @@
 
 {% block content %}
 
+{{data | log }}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -22,12 +24,41 @@
             </ol>
         </div>
 
+
         <h1 class="govuk-heading-xl">Medicine reminders</h1>
         <p class="govuk-body-l">Set a reminder here and we'll send you a regular text message, email or phone call.</p>
 
         <h2 class="govuk-heading-m">Your reminders</h2>
-        <p>You have no reminders yet.</p>
-        <a class="govuk-button" href="/v1/medicine-reminders/new">Set first reminder</a>
+
+        {% if data.reminders %}
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">When</th>
+                        <th class="govuk-table__header" scope="col">How</th>
+                        <th class="govuk-table__header" scope="col"></th>
+                        <th class="govuk-table__header" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    {% for reminder in data.reminders %}
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">{{ reminder.when | capitalize }}</th>
+                            <td class="govuk-table__cell">{{ reminder.type }}</td>
+                            <td class="govuk-table__cell">{{ reminder.name }}</td>
+                            <td class="govuk-table__cell"><a href="#">Change</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a class="govuk-button" href="/v1/medicine-reminders/new">Set another reminder</a>
+        {% else %}
+            <p>You have no reminders yet.</p>
+            <a class="govuk-button" href="/v1/medicine-reminders/new">Set first reminder</a>
+        {% endif %}
+
+
+        
 
     </div>
 </div>
