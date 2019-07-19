@@ -1,3 +1,4 @@
 module.exports = {
-    patient: 'Parkinsons UK is a charity for people living with Parkinsons and their loved ones.\n\nWe can give you personalised support and advice, and help you connect with other people in your position.\n\nStart your journey with us now: example.com'
+    patient: 'Parkinsons UK is a charity for people living with Parkinsons and their loved ones.\n\nWe can give you personalised support and advice, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1',
+    carer: 'Parkinsons UK is a charity for people living with Parkinsons and their loved ones.\n\nWe can give you personalised support and advice about caring for someone with Parkinsons, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1'
 }

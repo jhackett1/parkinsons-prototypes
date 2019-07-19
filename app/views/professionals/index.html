@@ -17,24 +17,44 @@
 
         <p class="govuk-body-l">Health professionals can use this tool to invite patients to enroll for <a href="#">personalised support</a> from Parkinsons UK.</p>
 
-        <p>We just need the patient's name and a contact detail, so we can send them a text message to start their journey.</p>
+        <p>We just need the patient's name and a phone number, so we can send them a text message to start their journey.</p>
 
         <form action="professionals" method="post">
 
             <div class="govuk-form-group">
                 <label class="govuk-label" for="name">
-                    Their name
+                    Patient's name
                 </label>
                 <input class="govuk-input govuk-input--width-20"" id="name" name="name" type="text" required>
               </div>
       
               <div class="govuk-form-group">
                   <label class="govuk-label" for="phone">
-                      Their phone number
+                      Patient's phone number
                   </label>
                   <input class="govuk-input govuk-input--width-20"" id="phone" name="phone" type="tel" required>
               </div>
-      
+
+              <p class="govuk-body">You can send a copy to a carer or loved one of the patient:</p>
+              <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Send a copy to another number
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                 
+                      <div class="govuk-form-group">
+                          <label class="govuk-label" for="carer-phone">
+                            Carer or loved one's phone number
+                          </label>
+                          <input class="govuk-input govuk-input--width-20"" id="carer-phone" name="carer-phone" type="tel">
+                      </div>
+
+                  </div>
+                </details>
+
+
               <div class="panel">
                 <p>Has the patient given consent for their information to be shared with Parkinsons UK?</p>
                 <div class="govuk-form-group">
@@ -45,7 +65,7 @@
                 </div>
               </div>
       
-              <button href="#" role="button" draggable="false" class="govuk-button" type="submit">
+              <button href="#" role="button" draggable="false" class="govuk-button govuk-button--start" type="submit">
                   Send invite
               </button>
 
