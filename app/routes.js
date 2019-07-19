@@ -26,15 +26,13 @@ router.post("/professionals", async (req, res)=>{
             await client.messages.create({
                 from: "Parkinsons",
                 to: phone(req.body['carer-phone'], "GB"),
-                // body: messageTemplates.carer
-                body: "1"
+                body: messageTemplates.carer
             })
         }
         await client.messages.create({
             from: "Parkinsons",
             to: phone(req.body.phone, "GB"),
-            // body: messageTemplates.patient
-            body: "2"
+            body: messageTemplates.patient
         })
         res.render("professionals/index", {flash:"The invite was sent successfully."})
     } catch(e){

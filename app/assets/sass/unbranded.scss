@@ -23,6 +23,11 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 @import "node_modules/govuk-frontend/all";
 
+
+.grayscale{
+    filter: grayscale(1)
+}
+
 .govuk-button{
     background-color: #006990 !important;
 }
