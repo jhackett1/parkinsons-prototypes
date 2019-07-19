@@ -46,3 +46,12 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 .service{
     margin: 20px 0px;
 }
+
+.flash{
+    background-color: transparentize(#006990, 0.75);
+    padding: 10px;
+    margin-bottom: 30px;
+    *:last-child{
+        margin-bottom: 0px;
+    }
+}

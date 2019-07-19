@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const phone  = require('phone');
 const twilio = require("twilio")
+const messageTemplates = require("./views/sms")
 const client = twilio(process.env.TWILIO_SID, process.env.TWILIO_AUTH_TOKEN)
 
 // Add your routes here - above the module.exports line
@@ -25,12 +26,10 @@ router.post("/professionals", (req, res)=>{
             .create({
                 from: "Parkinsons",
                 to: phone(req.body.phone, "GB"),
-                body: 'Parkinsons UK is a charity for people living with Parkinsons and their loved ones.\n\nWe can give you personalised support and advice, and help you connect with other people in your position.\n\nStart your journey with us now: example.com'
+                body: messageTemplates.patient
             })
-            .then(message => {
-                res.redirect("/professionals")
-            })
-            .catch(e=>console.log(e))
+            .then(message => res.render("professionals/index", {flash:"The invite was sent successfully."}))
+            .catch(e => res.render("professionals/index", {flash:"There was a problem sending the invite. Please check any phone numbers."}))
     }
 })
 

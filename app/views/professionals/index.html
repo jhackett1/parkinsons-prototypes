@@ -13,6 +13,8 @@
         <span class="govuk-caption-xl">For professionals</span>
         <h1 class="govuk-heading-xl">Invite a patient</h1>
 
+        {% if flash %}<div class="flash"><p class="govuk-body">{{flash}}</p></div>{% endif %}
+
         <p class="govuk-body-l">Health professionals can use this tool to invite patients to enroll for <a href="#">personalised support</a> from Parkinsons UK.</p>
 
         <p>We just need the patient's name and a contact detail, so we can send them a text message to start their journey.</p>
