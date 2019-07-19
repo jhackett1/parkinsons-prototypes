@@ -17,34 +17,39 @@
 
         <p>We just need the patient's name and a contact detail, so we can send them a text message to start their journey.</p>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="event-name">
-              Their name
-          </label>
-          <input class="govuk-input govuk-input--width-20"" id="event-name" name="event-name" type="text">
-        </div>
+        <form action="professionals" method="post">
 
-        <div class="govuk-form-group">
-            <label class="govuk-label" for="event-name">
-                Their phone number
-            </label>
-            <input class="govuk-input govuk-input--width-20"" id="event-name" name="event-name" type="text" >
-        </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="name">
+                    Their name
+                </label>
+                <input class="govuk-input govuk-input--width-20"" id="name" name="name" type="text" required>
+              </div>
+      
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="phone">
+                      Their phone number
+                  </label>
+                  <input class="govuk-input govuk-input--width-20"" id="phone" name="phone" type="tel" required>
+              </div>
+      
+              <div class="panel">
+                <p>Has the patient given consent for their information to be shared with Parkinsons UK?</p>
+                <div class="govuk-form-group">
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="consent" name="consent" type="checkbox" required>
+                      <label class="govuk-label govuk-checkboxes__label" for="consent">Yes, they have given consent</label> 
+                  </div>
+                </div>
+              </div>
+      
+              <button href="#" role="button" draggable="false" class="govuk-button" type="submit">
+                  Send invite
+              </button>
 
-        <div class="panel">
-          <p>Has the patient given consent for their information to be shared with Parkinsons UK?</p>
-          <div class="govuk-form-group">
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-1">Yes, they have given consent</label> 
-            </div>
-        </div>
-        </div>
+        </form>
 
 
-        <a href="#" role="button" draggable="false" class="govuk-button">
-            Send invite
-        </a>
 
     </div>
 </div>
