@@ -9,6 +9,7 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">For local advisors</span>
         <h1 class="govuk-heading-xl">Refer someone to support in their area</h1>
         <p class="govuk-body-l">Build a personalised list of support groups and activities around a person, decide which would be most useful, and make one referral for everything.</p>
     </div>
@@ -23,11 +24,62 @@
     <div class="govuk-grid-column-one-third">
         <!-- <h2 class="govuk-heading-m">Medicine reminders</h2> -->
         
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Nearby organisations
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item service-item">
+                  <input class="govuk-checkboxes__input" id="organisation-1" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-1">
+                    Age UK friendship group Camden
+                    <p class="category">Social</p>
+                  </label> </div>
+                <div class="govuk-checkboxes__item service-item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Age UK friendship group Westminster
+                    <p class="category">Social</p>
+                  </label> </div>
+                <div class="govuk-checkboxes__item service-item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Westminster Parkinsons advice centre
+                    <p class="category">Advice</p>
+                  </label> </div>
+                <div class="govuk-checkboxes__item service-item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Pimlico skylarks
+                    <p class="category">Active</p>
+                  </label> </div>
+                <div class="govuk-checkboxes__item service-item">
+                <input class="govuk-checkboxes__input" id="organisation-5" name="organisation" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+                    Brixton recreation centre
+                    <p class="category">Active</p>
+                </label> </div>
+                <div class="govuk-checkboxes__item service-item">
+                        <input class="govuk-checkboxes__input" id="organisation-6" name="organisation" type="checkbox" value="">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+                          Age UK Lewisham and Southwark
+                          <p class="category">Advice</p>
+                        </label> </div>
+              </div>
+            </fieldset>
+          </div>
         
         
-        <a href="/social-referral" role="button" draggable="false" class="govuk-button">
-            Send referrals
-        </a>
+          <div class="panel">
+              <p class="govuk-body-s">We will send this person's details to the selected organisations, and email them a copy of the list.</p>
+                <a href="/social-referral" role="button" draggable="false" class="govuk-button">
+                    Send referrals
+                </a>
+          </div>
+
 
 
     </div>

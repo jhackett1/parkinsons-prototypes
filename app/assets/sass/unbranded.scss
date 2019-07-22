@@ -41,6 +41,23 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     }
 }
 
+.service-item{
+    margin-bottom: 10px;
+}
+
+    .govuk-checkboxes--small .govuk-checkboxes__label{
+        padding-top: 7px;
+    }
+
+
+
+.category{
+    font-size: 0.9em;
+    opacity: 0.5;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
 .panel--blue{
     p, a{
         color: white !important;
