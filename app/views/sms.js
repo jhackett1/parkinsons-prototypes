@@ -1,4 +1,5 @@
 module.exports = {
-    patient: 'Parkinsons UK is a charity who support people with Parkinsons and their families.\n\nWe can give you personalised support and advice, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1',
-    carer: 'Parkinsons UK is a charity who support the loved ones of people with Parkinsons.\n\nWe can give you personalised support and advice about caring for someone with Parkinsons, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1'
+    patient: "Parkinsons UK is a charity who support people with Parkinsons and their families.\n\nWe can give you personalised support and advice, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1",
+    carer: "Parkinsons UK is a charity who support the loved ones of people with Parkinsons.\n\nWe can give you personalised support and advice about caring for someone with Parkinsons, and help you connect with other people in your position.\n\nStart your journey with us now: parkinsons-prototypes.herokuapp.com/v1",
+    socialReferral: "Your list of recommendations is at example.com/example-recommendations list.\n\nWe've passed your details onto these organisations, and you should hear back within 24 hours."
 }

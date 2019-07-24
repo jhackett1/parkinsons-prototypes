@@ -19,8 +19,8 @@ router.post("/v1/medicine-reminders", (req, res)=>{
     res.redirect("/v1/medicine-reminders/index")
 })
 
-router.post("/professionals", async (req, res)=>{
 
+router.post("/professionals", async (req, res)=>{
     try{
         if(req.body['carer-phone']){
             await client.messages.create({
@@ -39,7 +39,21 @@ router.post("/professionals", async (req, res)=>{
         console.log(e)
         res.render("professionals/index", {flash:"There was a problem sending the invite. Please check any phone numbers."})
     }
-    
+})
+
+
+router.post("/social-referral", async (req, res)=>{
+    try{
+        await client.messages.create({
+            from: "Parkinsons",
+            to: phone(req.body.phone, "GB"),
+            body: messageTemplates.socialReferral
+        })
+        res.render("social-referral/index", {flash:"The referral was made successfully."})
+    } catch(e){
+        console.log(e)
+        res.render("social-referral/index", {flash:"There was a problem sending the referral. Please check any phone numbers."})
+    }
 })
 
 module.exports = router
