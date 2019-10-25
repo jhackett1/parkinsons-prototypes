@@ -15,21 +15,59 @@
 $govuk-global-styles: true;
 
 // Override the govuk-frontend font stack
-$govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+$govuk-font-family: 'Nunito', sans-serif;
 
 // Override the canvas background colour, which is normally grey to blend with
 // the GOV.UK footer.
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
+$parkinsons-dark: #000045;
+$parkinsons-blue: #00adf0;
+
 @import "node_modules/govuk-frontend/all";
 
 
-.grayscale{
+.grayscale {
     filter: grayscale(1)
 }
 
-.govuk-button{
-    background-color: #006990 !important;
+.govuk-button {
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 4em;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    max-width: 27em;
+    min-width: 8em;
+    padding: 1em 2em .9em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 150ms ease-out;
+    background-color: $parkinsons-dark;
+    color: #fff;
+    background-image: none;  
+    box-shadow: none;
+
+    &:hover {
+        border-color: $parkinsons-dark;
+        color: $parkinsons-dark;
+        background-color: #fff;
+    }
+}
+
+.govuk-input:focus {
+    border-color: $parkinsons-blue;
+    outline: none;
+}
+
+a.govuk-link-colour {
+    color: $parkinsons-blue !important;
+}
+
+.govuk-details__summary:focus {
+    background: $parkinsons-blue;
+    outline-color: $parkinsons-blue;
 }
 
 .panel{
@@ -80,4 +118,20 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 iframe{
     border: none;
+}
+
+header {
+    background: $parkinsons-dark;
+    height: 85px;
+
+    .logo {
+        background: #fff;
+        overflow: hidden;
+        width: 10em;
+        padding: .4em .8em;
+    }
+
+    img {
+        width: 10em;
+    }
 }
