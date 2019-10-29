@@ -29,6 +29,15 @@ $parkinsons-dark-grey: #616171;
 
 $govuk-link-colour: $parkinsons-dark;
 
+@font-face {
+    font-family: "Parkinsons UK Stencil";
+    src: url("/public/fonts/parkinsonsukstencil-webfont.eot#iefix") format("embedded-opentype"), url("/public/fonts/parkinsonsukstencil-webfont.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+  }
+
+
 @import "node_modules/govuk-frontend/all";
 
 .govuk-heading-xl,
@@ -42,6 +51,10 @@ p {
 
 .grayscale {
     filter: grayscale(1)
+}
+
+.govuk-heading-xl {
+    font-family: 'Parkinsons UK Stencil', sans-serif;
 }
 
 .govuk-button {
@@ -164,4 +177,9 @@ footer {
     height: 85px;
     background: #4b4b4b;
     color: #fff;
+
+    .govuk-link:focus, a:focus {
+        background: none;
+        outline-color: #fff;
+    }
 }
