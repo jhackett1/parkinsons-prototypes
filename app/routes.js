@@ -20,7 +20,7 @@ router.post("/v1/medicine-reminders", (req, res)=>{
 })
 
 
-router.post("/professionals", async (req, res)=>{
+router.post("/professionals/index3", async (req, res)=>{
     try{
         if(req.body['carer-phone']){
             await client.messages.create({
@@ -34,10 +34,10 @@ router.post("/professionals", async (req, res)=>{
             to: phone(req.body.phone, "GB"),
             body: messageTemplates.patient
         })
-        res.render("professionals/index", {flash:"The invite was sent successfully."})
+        res.render("professionals/index3", {flash:"The invite was sent successfully."})
     } catch(e){
         console.log(e)
-        res.render("professionals/index", {flash:"There was a problem sending the invite. Please check any phone numbers."})
+        res.render("professionals/index3", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
     }
 })
 
@@ -52,7 +52,7 @@ router.post("/social-referral", async (req, res)=>{
         res.render("social-referral/index", {flash:"The referral was made successfully."})
     } catch(e){
         console.log(e)
-        res.render("social-referral/index", {flash:"There was a problem sending the referral. Please check any phone numbers."})
+        res.render("social-referral/index", {flash:"There was a problem sending the referral. Please go back and check the phone number"})
     }
 })
 
