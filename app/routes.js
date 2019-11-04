@@ -42,6 +42,28 @@ router.post("/professionals/index3", async (req, res)=>{
 })
 
 
+router.post("/professionals/index6", async (req, res)=>{
+    try{
+        if(req.body['carer-phone']){
+            await client.messages.create({
+                from: "Parkinsons",
+                to: phone(req.body['carer-phone'], "GB"),
+                body: messageTemplates.carer
+            })
+        }
+        await client.messages.create({
+            from: "Parkinsons",
+            to: phone(req.body.phone, "GB"),
+            body: messageTemplates.patient
+        })
+        res.render("professionals/index6", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
+    } catch(e){
+        console.log(e)
+        res.render("professionals/index6", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
+    }
+})
+
+
 router.post("/social-referral", async (req, res)=>{
     try{
         await client.messages.create({
