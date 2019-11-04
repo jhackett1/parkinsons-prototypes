@@ -40,12 +40,22 @@
 
         {% if flash %}<div class="flash"><p class="govuk-body">{{flash}}</p></div>{% endif %}
 
-        <blockquote style="margin: 2em 0;">
+        <blockquote style="margin: 40px 0 10px 0;">
             &lsquo;Parkinson's UK can provide you with information and support. Are you happy to provide your name and contact details for them to send you a text or email invite?&rsquo;
         </blockquote>
         <form action="index2" method="post">
 
-          
+            <details class="govuk-details small-text" data-module="govuk-details" style="margin-bottom: 40px;">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    The patient doesn't have access to email or a smartphone
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  If the patient would like an invite to Parkinson's UK but doesn't have their own email or smartphone, we can send information by post or arrange a call back. <a href="#">Offline options</a>
+                </div>
+              </details>
+
               <div class="panel" style="background: none; padding: 0;">
                 <p>Has the patient given consent for their information to be shared with Parkinson's UK?</p>
                 <div class="govuk-form-group">

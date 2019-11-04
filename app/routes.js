@@ -34,7 +34,7 @@ router.post("/professionals/index3", async (req, res)=>{
             to: phone(req.body.phone, "GB"),
             body: messageTemplates.patient
         })
-        res.render("professionals/index3", {flash:"The invite was sent successfully."})
+        res.render("professionals/index3", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
     } catch(e){
         console.log(e)
         res.render("professionals/index3", {flash:"There was a problem sending the invite. Please go back and check the phone number"})

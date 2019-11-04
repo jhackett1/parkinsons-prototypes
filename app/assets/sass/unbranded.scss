@@ -21,6 +21,7 @@ $govuk-font-family: 'Nunito', sans-serif;
 // the GOV.UK footer.
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
+$parkinsons-body: #01011C;
 $parkinsons-dark: #000045;
 $parkinsons-blue: #00adf0;
 $parkinsons-light-grey: #EEF3F8;
@@ -46,7 +47,7 @@ $govuk-link-colour: $parkinsons-dark;
 .govuk-body, 
 .govuk-label,
 p {
-    color: $parkinsons-dark;
+    color: $parkinsons-body;
 }
 
 .grayscale {
@@ -82,14 +83,16 @@ p {
     }
 }
 
-.govuk-input:focus {
-    border-color: $parkinsons-blue;
-    outline: none;
-}
+.govuk-details__summary {
+    &:focus {
+        border-color: $parkinsons-blue;
+        background: $parkinsons-blue;
+        outline: none;
+    }
 
-.govuk-details__summary:focus {
-    background: $parkinsons-blue;
-    outline-color: $parkinsons-blue;
+    &:hover {
+        color: $parkinsons-blue;
+    }
 }
 
 .panel{
@@ -133,6 +136,7 @@ p {
     background-color: transparentize($parkinsons-blue, 0.75);
     padding: 10px;
     margin-bottom: 30px;
+
     *:last-child{
         margin-bottom: 0px;
     }
@@ -143,8 +147,11 @@ iframe{
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     background: $parkinsons-dark;
     height: 85px;
+    font-family: 'Nunito', sans-serif;
 
     .logo {
         background: #fff;
@@ -182,4 +189,8 @@ footer {
         background: none;
         outline-color: #fff;
     }
+}
+
+.small-text {
+    font-size: .88889em;
 }
