@@ -36,14 +36,24 @@
 
         
         <h1 class="govuk-heading-xl">Invite a friend or family member</h1>
-        <span class="govuk-caption-xl">Use this form to refer friends or family members to Parkinson's UK. Please read the following question aloud to the individual:</span>
+        <span class="govuk-body-l">Use this form to refer friends or family members to Parkinson's UK. Please read the following question aloud to the individual:</span>
 
         {% if flash %}<div class="flash"><p class="govuk-body">{{flash}}</p></div>{% endif %}
 
-        <blockquote style="margin: 2em 0;">
+        <blockquote style="margin: 40px 0 10px 0;">
             &lsquo;Parkinson's UK can provide you with information and support. Are you happy to provide your name and contact details for them to send you a text or email invite?&rsquo;
         </blockquote>
         <form action="index5" method="post">
+            <details class="govuk-details small-text" data-module="govuk-details" style="margin-bottom: 40px;">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                The individual doesn't have access to email or a smartphone
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                If the individual would like an invite to Parkinson's UK but doesn't have their own email or smartphone, we can send information by post or arrange a call back. <a href="#">Offline options</a>
+            </div>
+            </details>
 
           
               <div class="panel" style="background: none; padding: 0;">
