@@ -1,0 +1,61 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% from "back-link/macro.njk"     import govukBackLink %}
+{% from "breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "button/macro.njk"        import govukButton %}
+{% from "checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "date-input/macro.njk"    import govukDateInput %}
+{% from "details/macro.njk"       import govukDetails %}
+{% from "error-message/macro.njk" import govukErrorMessage %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "fieldset/macro.njk"      import govukFieldset %}
+{% from "file-upload/macro.njk"   import govukFileUpload %}
+{% from "input/macro.njk"         import govukInput %}
+{% from "inset-text/macro.njk"    import govukInsetText %}
+{% from "panel/macro.njk"         import govukPanel %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "radios/macro.njk"        import govukRadios %}
+{% from "select/macro.njk"        import govukSelect %}
+{% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "table/macro.njk"         import govukTable %}
+{% from "tabs/macro.njk"          import govukTabs %}
+{% from "tag/macro.njk"           import govukTag %}
+{% from "textarea/macro.njk"      import govukTextarea %}
+{% from "warning-text/macro.njk"  import govukWarningText %}
+
+{% block pageTitle %}
+  Parkinson's UK
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">Invitation sent</h1>
+   
+   {% if flash %}<div class="flash" style="display: flex;">
+     <svg width="auto" height="1.3em" style="margin-right: .5em;" viewBox="0 0 82 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Artboard" fill="#000045">
+              <g id="Group" transform="translate(40.500000, 34.000000) rotate(6.000000) translate(-40.500000, -34.000000) translate(-2.000000, -7.000000)">
+                  <path d="M50.513846,-2 L52.513846,-2 C56.932124,-2 60.513846,1.581722 60.513846,6 L60.513846,76 C60.513846,80.418278 56.932124,84 52.513846,84 L50.513846,84 C46.095568,84 42.513846,80.418278 42.513846,76 L42.513846,6 C42.513846,1.581722 46.095568,-2 50.513846,-2 Z" id="Rectangle" transform="translate(51.513846, 41.000000) rotate(-324.000000) translate(-51.513846, -41.000000) "></path>
+                  <path d="M21,42.5263935 L23,42.5263935 C27.418278,42.5263935 31,46.1081155 31,50.5263935 L31,74.5263935 C31,78.9446715 27.418278,82.5263935 23,82.5263935 L21,82.5263935 C16.581722,82.5263935 13,78.9446715 13,74.5263935 L13,50.5263935 C13,46.1081155 16.581722,42.5263935 21,42.5263935 Z" id="Rectangle-Copy" transform="translate(22.000000, 62.526394) rotate(-234.000000) translate(-22.000000, -62.526394) "></path>
+              </g>
+          </g>
+      </g>
+    </svg>
+    <p class="govuk-body">{{flash}}</p></div>{% endif %}
+   
+  <div>
+    <a href="/professionals/index1" role="button" draggable="false" class="govuk-button govuk-button--start">
+      Return
+    </a>  
+  </div>
+
+    </div>
+</div>
+
+{% endblock %}
