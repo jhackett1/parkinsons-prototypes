@@ -20,7 +20,7 @@ router.post("/v1/medicine-reminders", (req, res)=>{
 })
 
 
-router.post("/professionals/index3", async (req, res)=>{
+router.post("/professionals/patient-invite-status", async (req, res)=>{
     try{
         if(req.body['carer-phone']){
             await client.messages.create({
@@ -34,15 +34,15 @@ router.post("/professionals/index3", async (req, res)=>{
             to: phone(req.body.phone, "GB"),
             body: messageTemplates.patient
         })
-        res.render("professionals/index3", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
+        res.render("professionals/patient-invite-status", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
     } catch(e){
         console.log(e)
-        res.render("professionals/index3", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
+        res.render("professionals/patient-invite-status", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
     }
 })
 
 
-router.post("/professionals/index6", async (req, res)=>{
+router.post("/professionals/loved-one-invite-status", async (req, res)=>{
     try{
         if(req.body['carer-phone']){
             await client.messages.create({
@@ -56,10 +56,10 @@ router.post("/professionals/index6", async (req, res)=>{
             to: phone(req.body.phone, "GB"),
             body: messageTemplates.patient
         })
-        res.render("professionals/index6", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
+        res.render("professionals/loved-one-invite-status", {flash:"Thank you. A text has been sent containing a link to receive information and support from Parkinson's UK"})
     } catch(e){
         console.log(e)
-        res.render("professionals/index6", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
+        res.render("professionals/loved-one-invite-status", {flash:"There was a problem sending the invite. Please go back and check the phone number"})
     }
 })
 
@@ -77,5 +77,23 @@ router.post("/social-referral", async (req, res)=>{
         res.render("social-referral/index", {flash:"There was a problem sending the referral. Please go back and check the phone number"})
     }
 })
+
+// Branching
+router.post('/professionals/invitee', function (req, res) {
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+  
+    let pwp = req.session.data['invitee']
+  
+    if (pwp === 'false') {
+      res.redirect('/professionals/loved-one-consent')
+    } else {
+      res.redirect('/professionals/patient-consent')
+    }
+  })
+
+  
+
 
 module.exports = router
