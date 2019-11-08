@@ -50,6 +50,15 @@ p {
     color: $parkinsons-body;
 }
 
+h1, h2 {
+    font-weight: normal;
+}
+
+b, strong, blockquote {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
 .grayscale {
     filter: grayscale(1)
 }
