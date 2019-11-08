@@ -1,0 +1,77 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% from "back-link/macro.njk"     import govukBackLink %}
+{% from "breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "button/macro.njk"        import govukButton %}
+{% from "checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "date-input/macro.njk"    import govukDateInput %}
+{% from "details/macro.njk"       import govukDetails %}
+{% from "error-message/macro.njk" import govukErrorMessage %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "fieldset/macro.njk"      import govukFieldset %}
+{% from "file-upload/macro.njk"   import govukFileUpload %}
+{% from "input/macro.njk"         import govukInput %}
+{% from "inset-text/macro.njk"    import govukInsetText %}
+{% from "panel/macro.njk"         import govukPanel %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "radios/macro.njk"        import govukRadios %}
+{% from "select/macro.njk"        import govukSelect %}
+{% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "table/macro.njk"         import govukTable %}
+{% from "tabs/macro.njk"          import govukTabs %}
+{% from "tag/macro.njk"           import govukTag %}
+{% from "textarea/macro.njk"      import govukTextarea %}
+{% from "warning-text/macro.njk"  import govukWarningText %}
+
+{% block pageTitle %}
+  Parkinson's UK
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Invite someone to receive information and support from Parkinson's UK</h1>
+        <p class="govuk-body-l">Use this form to refer patients, friends and family members to Parkinson's UK. Please read the following question aloud to the patient:</p>
+
+
+        {% if flash %}<div class="flash"><p class="govuk-body">{{flash}}</p></div>{% endif %}
+
+          <form action="/professionals/invitee" method="post" class="form">
+    
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Who would you like to invite?
+                </h2>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="invite-patient" name="invitee" type="radio" value="true">
+                  <label class="govuk-label govuk-radios__label" for="invite-patient">
+                    Invite a patient
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="invite-loved-one" name="invitee" type="radio" value="false">
+                  <label class="govuk-label govuk-radios__label" for="invite-loved-one">
+                    Invite a loved one
+                  </label>
+                </div>
+              </div>
+              </fieldset>
+            </div>
+    
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+    
+          </form>
+       
+
+    </div>
+</div>
+
+{% endblock %}
